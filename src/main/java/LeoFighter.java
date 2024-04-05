@@ -38,6 +38,8 @@ public class LeoFighter extends Robot
     public void onScannedRobot(ScannedRobotEvent e) {
         // Replace the next line with any behavior you would like
         fire(3);
+        turnRight(45);
+        ahead(40);
     }
 
     /**
@@ -45,7 +47,7 @@ public class LeoFighter extends Robot
      */
     public void onHitByBullet(HitByBulletEvent e) {
         // Replace the next line with any behavior you would like
-        turnLeft(10);
+        turnLeft(90);
         ahead(40);
     }
 
