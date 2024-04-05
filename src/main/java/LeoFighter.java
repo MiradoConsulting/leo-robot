@@ -1,6 +1,7 @@
 import robocode.*;
 
 import java.awt.Color;
+import java.io.FileReader;
 import java.util.Random;
 
 // API help : https://robocode.sourceforge.io/docs/robocode/robocode/Robot.html
@@ -24,11 +25,11 @@ public class LeoFighter extends Robot
         // Robot main loop
         while(true) {
             // Replace the next 4 lines with any behavior you would like
-            ahead(30);
+            ahead(new Random(80).nextLong());
             turnLeft(new Random(60).nextLong());
-            ahead(30);
+            ahead(new Random(80).nextLong());
             turnRight(new Random(90).nextLong());
-            ahead(30);
+            ahead(new Random(80).nextLong());
         }
     }
 
@@ -38,8 +39,11 @@ public class LeoFighter extends Robot
     public void onScannedRobot(ScannedRobotEvent e) {
         // Replace the next line with any behavior you would like
         fire(3);
-        fire(3);
-        turnRight(45);
+        turnGunLeft(5);
+        fire(2);
+        turnGunRight(5);
+        fire(2);
+
         ahead(100);
     }
 
