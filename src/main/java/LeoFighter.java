@@ -24,11 +24,11 @@ public class LeoFighter extends Robot
         // Robot main loop
         while(true) {
             // Replace the next 4 lines with any behavior you would like
-            ahead(10);
-            turnLeft(new Random(30).nextLong());
-            ahead(10);
-            turnRight(new Random(20).nextLong());
-            ahead(10);
+            ahead(30);
+            turnLeft(new Random(60).nextLong());
+            ahead(30);
+            turnRight(new Random(90).nextLong());
+            ahead(30);
         }
     }
 
@@ -39,7 +39,7 @@ public class LeoFighter extends Robot
         // Replace the next line with any behavior you would like
         fire(3);
         turnRight(45);
-        ahead(40);
+        ahead(100);
     }
 
     /**
