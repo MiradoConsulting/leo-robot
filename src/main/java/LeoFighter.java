@@ -19,7 +19,7 @@ public class LeoFighter extends Robot
         // After trying out your robot, try uncommenting the import at the top,
         // and the next line:
 
-         setColors(Color.green,Color.blue,Color.red); // body,gun,radar
+         setColors(Color.yellow,Color.pink,Color.pink); // body,gun,radar
 
         // Robot main loop
         while(true) {
