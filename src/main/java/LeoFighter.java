@@ -1,6 +1,9 @@
-import robocode.*;
+import robocode.HitByBulletEvent;
+import robocode.HitWallEvent;
+import robocode.Robot;
+import robocode.ScannedRobotEvent;
 
-import java.awt.Color;
+import java.awt.*;
 import java.util.Random;
 
 // API help : https://robocode.sourceforge.io/docs/robocode/robocode/Robot.html
@@ -8,8 +11,7 @@ import java.util.Random;
 /**
  * LeoFighter - a robot by (your name here)
  */
-public class LeoFighter extends Robot
-{
+public class LeoFighter extends Robot {
     /**
      * run: LeoFighter's default behavior
      */
@@ -19,10 +21,13 @@ public class LeoFighter extends Robot
         // After trying out your robot, try uncommenting the import at the top,
         // and the next line:
 
-         setColors(Color.green,Color.blue,Color.red); // body,gun,radar
+        setColors(Color.green, Color.blue, Color.red); // body,gun,radar
 
         // Robot main loop
-        while(true) {
+        while (true) {
+            setColors(new Color(new Random(255).nextInt()),
+                    new Color(new Random(255).nextInt()),
+                    new Color(new Random(255).nextInt()));
             // Replace the next 4 lines with any behavior you would like
             ahead(20);
             turnGunRight(20);
