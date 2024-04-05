@@ -58,6 +58,6 @@ public class LeoFighter extends Robot
      */
     public void onHitWall(HitWallEvent e) {
         // Replace the next line with any behavior you would like
-        turnLeft(30);
+        turnLeft(new Random(60).nextLong());
     }
 }
